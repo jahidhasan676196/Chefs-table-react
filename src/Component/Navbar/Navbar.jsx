@@ -1,4 +1,5 @@
-
+import searchImg from '../../Image/Frame (9).svg'
+import profileImg from '../../Image/Frame (10).svg'
 
 const Navbar = () => {
     return (
@@ -10,8 +11,12 @@ const Navbar = () => {
                 <a href="">About</a>
                 <a href="Search">Search</a>
             </div>
-            <div>
-                <input className="border" type="text" placeholder="Search" />
+            <div className='flex gap-6'>
+              <div className='flex bg-[#DCDCFF] px-6 rounded-full'>
+                <img className='w-6' src={searchImg} alt="" />
+                <input className="bg-[#DCDCFF] rounded-r-full" type="text" placeholder="Search" />
+              </div>
+              <img className='bg-[#A09AFF] rounded-full' src={profileImg} alt="" />
             </div>
         </div>
     );

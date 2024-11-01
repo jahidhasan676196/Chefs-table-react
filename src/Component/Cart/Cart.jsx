@@ -1,7 +1,7 @@
 
 
 
-const Cart = ({cart}) => {
+const Cart = ({cart,handlecartClick}) => {
     const {recipe_image,recipe_name,short_description,preparing_time,calories,ingredients}=cart
     // console.log(ingredients);
     return (
@@ -20,7 +20,7 @@ const Cart = ({cart}) => {
                 <p>{preparing_time}</p>
                 <p>{calories} calories</p>
             </div>
-            <button className="bg-[#0BE58A] px-6 py-4 rounded-full">Want to Cook</button>
+            <button onClick={()=>handlecartClick(cart)} className="bg-[#0BE58A] px-6 py-4 rounded-full text-[#150B2B] font-medium text-lg">Want to Cook</button>
         </div>
     );
 };
